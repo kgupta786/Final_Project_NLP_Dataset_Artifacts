@@ -41,7 +41,6 @@ def generate_contrast_set(example):
                 new_hypothesis.append(token.text)
         contrast_example["hypothesis"] = " ".join(new_hypothesis)
         contrast_example["label"] = 2  # Contradiction
-
     elif contrast_example["label"] == 2:  # Contradiction
         # Convert contradiction to entailment by removing negations
         new_hypothesis = []
@@ -53,17 +52,10 @@ def generate_contrast_set(example):
         contrast_example["hypothesis"] = " ".join(new_hypothesis)
         contrast_example["label"] = 0  # Entailment
 
-    elif contrast_example["label"] == 1:  # Neutral
-        # Change neutral by slightly altering context (e.g., changing quantifiers)
-        new_hypothesis = []
-        for token in doc:
-            if token.lemma_ == "some":
-                new_hypothesis.append("all")  # Example of quantifier change
-            else:
-                new_hypothesis.append(token.text)
-        contrast_example["hypothesis"] = " ".join(new_hypothesis)
-        contrast_example["label"] = 2  # Change to contradiction for variety
-
+    elif contrast_example["label"] == 1:
+        # Neutral
+        # Ignore
+        0
     return contrast_example
 
 # Generate contrast sets for each example in the dataset
