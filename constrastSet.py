@@ -31,3 +31,4 @@ hans = load_dataset("hans", split="train", trust_remote_code=True)
 save_contrast_dataset(hans, "HANS", "hans.json")
 
 # [[14697, 0, 303], [13684, 0, 1316], [0, 0, 0]]
+# {'eval_loss': 2.393868923187256, 'eval_model_preparation_time': 0.0011, 'eval_accuracy': 0.48989999294281006, 'eval_runtime': 94.9075, 'eval_samples_per_second': 316.097, 'eval_steps_per_second': 39.512}

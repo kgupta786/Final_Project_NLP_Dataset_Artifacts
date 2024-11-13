@@ -99,3 +99,4 @@ print(f"ANLI dataset saved to 'anli_dataset.json'.")
 
 
 # [[7073, 3895, 3480], [2509, 12337, 6113], [2480, 2239, 5334]]
+# {'eval_loss': 1.4627199172973633, 'eval_model_preparation_time': 0.0011, 'eval_accuracy': 0.5443027019500732, 'eval_runtime': 152.4447, 'eval_samples_per_second': 298.206, 'eval_steps_per_second': 37.279}
